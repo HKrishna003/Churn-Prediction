@@ -1,0 +1,17 @@
+
+body {
+    font-family: Arial, sans-serif;
+    color:black;
+    background-image: url("bg.jpg"); /* Replace with the actual path to your image */
+    background-size: cover; 
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+}
+

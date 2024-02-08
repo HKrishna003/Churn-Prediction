@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Network Churn Prediction</title>
+</head>
+<body>
+    <center><h1>Churn Prediction</h1></center>
+    
+    {% if prediction %}
+        <h2>Prediction Result:</h2>
+        <p>{{ prediction }}</p>
+    {% endif %}
+    
+    <form method="post" enctype="multipart/form-data">
+        <label for="AccountWeeks">Account Weeks:</label>
+        <input type="text" name="AccountWeeks" required><br><br>
+        <label for="ContractRenewal">Contract Renewal:</label>
+        <input type="text" name="ContractRenewal" required><br><br>
+        <label for="DataPlan">Data Plan:</label>
+        <input type="text" name="DataPlan" required><br><br>
+        <label for="DataUsage">Data Usage:</label>
+        <input type="text" name="DataUsage" required><br><br>
+        <label for="CustServCalls">Cust ServCalls:</label>
+        <input type="text" name="CustServCalls" required><br><br>
+        <label for="DayMins">Day Mins:</label>
+        <input type="text" name="DayMins" required><br><br>
+        <label for="DayCalls">Day Calls:</label>
+        <input type="text" name="DayCalls" required><br><br>
+        <label for="MonthlyCharge">Monthly Charge:</label>
+        <input type="text" name="MonthlyCharge" required><br><br>
+        <label for="OverageFee">Overage Fee:</label>
+        <input type="text" name="OverageFee" required><br><br>
+        <label for="RoamMins">Roam Mins:</label>
+        <input type="text" name="RoamMins" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    <div class="one">
+       <h1>INTRODUCTION</h1>
+       <p>Churn is a measurement of the percentage of accounts that cancel or choose not to renew their subscriptions. A high churn rate can negatively impact Monthly Recurring Revenue (MRR) and can also indicate dissatisfaction with a product or service.</p>
+    </div>
+</body>
+</html>
